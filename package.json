@@ -1,27 +1,25 @@
 {
   "name": "he4rt-studio",
   "version": "1.0.0",
-  "description": "A Remotion template for TikTok-style captions",
+  "description": "He4rt Pub 3ª edição — reels 1080x1920 em Remotion",
   "repository": {},
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@remotion/cli": "4.0.512",
-    "@remotion/zod-types": "4.0.512",
     "@remotion/animation-utils": "4.0.512",
+    "@remotion/cli": "4.0.512",
+    "@remotion/fonts": "4.0.512",
+    "@remotion/google-fonts": "4.0.512",
     "@remotion/layout-utils": "4.0.512",
+    "@remotion/media": "4.0.512",
     "@remotion/media-utils": "4.0.512",
+    "@remotion/transitions": "4.0.512",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "remotion": "4.0.512",
-    "zod": "4.4.3",
-    "@remotion/tailwind-v4": "4.0.512",
-    "tailwindcss": "4.0.0"
+    "remotion": "4.0.512"
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.512",
-    "@remotion/install-whisper-cpp": "4.0.512",
-    "@remotion/captions": "4.0.512",
     "@types/react": "19.2.7",
     "@types/web": "0.0.166",
     "eslint": "9.19.0",
@@ -30,12 +28,9 @@
   },
   "scripts": {
     "dev": "remotion studio",
+    "render": "remotion render Reels out/he4rt-pub-3a-edicao.mp4",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc",
-    "create-subtitles": "node sub.mjs"
-  },
-  "sideEffects": [
-    "*.css"
-  ]
+    "lint": "eslint src && tsc"
+  }
 }

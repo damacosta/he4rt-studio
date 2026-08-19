@@ -1,25 +1,20 @@
-import "./index.css";
-import { Composition, staticFile } from "remotion";
-import {
-  CaptionedVideo,
-  calculateCaptionedVideoMetadata,
-  captionedVideoSchema,
-} from "./CaptionedVideo";
+import React from "react";
+import { Composition } from "remotion";
+import { loadFont as loadAnton } from "@remotion/google-fonts/Anton";
+import { loadFont as loadBarlow } from "@remotion/google-fonts/BarlowCondensed";
+import { Reels } from "./Reels";
+import { FPS, TOTAL_FRAMES } from "./style";
 
-// Each <Composition> is an entry in the sidebar!
+loadAnton();
+loadBarlow();
 
-export const RemotionRoot: React.FC = () => {
-  return (
-    <Composition
-      id="CaptionedVideo"
-      component={CaptionedVideo}
-      calculateMetadata={calculateCaptionedVideoMetadata}
-      schema={captionedVideoSchema}
-      width={1080}
-      height={1920}
-      defaultProps={{
-        src: staticFile("sample-video.mp4"),
-      }}
-    />
-  );
-};
+export const RemotionRoot: React.FC = () => (
+  <Composition
+    id="Reels"
+    component={Reels}
+    durationInFrames={TOTAL_FRAMES}
+    fps={FPS}
+    width={1080}
+    height={1920}
+  />
+);
